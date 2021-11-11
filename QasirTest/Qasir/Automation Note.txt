@@ -1,0 +1,3 @@
+If we want to run it, we need install python and install selenium library 
+So i just give the video to you, so you can see the result.
+I can use katalon but, for this test i just use python to make 1 files.

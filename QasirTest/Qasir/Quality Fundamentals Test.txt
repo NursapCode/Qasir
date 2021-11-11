@@ -1,0 +1,49 @@
+1.  Q : Give an example of what QA can do to make a good impact on a software development project in terms of communication.
+    A : QA should have a good bug report, like how this bug can happen and analysis root cause of this bug, so developer can check and fix the bug asap.
+
+2.  Q : Based on this video make a bug report https://drive.google.com/file/d/1i-ikObwQZfxd4XJ58_BauXrYMkw2cKMq/view?usp=sharing
+        Petunjuk: Gunakan aplikasi Qasir di playstore
+    A : Test Name : limitation char user input for 'Add Bank Account - Account number' Feature
+        Description : There is limitation for user to input bank account number more than 10 number, it should be ok if user have account number more than 10 number.
+        Procedure : 1. ....(i don't know how to go in Add bank account feature, so i focus in from what i see in video)
+                    2. Open Payment Form
+                    3. Select "Add Bank Account"
+                    4. Input Bank Name
+                    5. Input Bank Account number more than 10 number(int only)
+        Ecpected Result : Step 5. should be ok to input account number more than 10, depends how long bank account number that user have.
+
+3.  Q : Berikut adalah dua struk untuk satu transaksi yang sama.
+        Struk di kiri adalah struk kasbon dan struk yang di kanan adalah struk pelunasan.
+        Temukan bug yang terjadi di kasus ini lalu laporkan dengan format pelaporan yang baik.
+    A : Kasbon:
+        1.  Test Name :
+                Wrong percent calculation for ppb 50%
+            Description :
+                ppb 12 huruf 50% should be calculation between Subtotal * 50%
+            Procedure :
+                1. Create Kasbon scenario
+                2. Check printout from system about pph 12 huruf 50%
+            Expected result :
+                Step 2. Should be printout pph 12 huruf 50% for 55.000
+
+        2.  Test Name :
+                Wrong percent calculation for service tax
+            Description :
+                Service tac 10% have wrong calculation, the result should be 11.000, because 10% from 110.000
+            Procedure :
+                1. Create Kasbon scenario
+                2. Check printout from system about service tax 10%
+            Expected result :
+                Step 2. Should be printout service tax for 11.000
+
+        3.  Test Name :
+                Wrong calculation for Total Kasbon
+            Description :
+                The amount of total Kasbon should be result of Subtotal + ppb 12 huruf 50% + service tax 10%. Current Total printout from the right computation not from sum from those 3 value.
+            Procedure :
+                1. Create Kasbon scenario
+                2. Check printout from system about total payment
+            Expected result :
+                Step 2. The result should be total sum of Subtotal + ppb 12 huruf 50% + service tax 10%.
+
+
